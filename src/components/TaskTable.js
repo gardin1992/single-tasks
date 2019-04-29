@@ -21,11 +21,11 @@ export default class TaskTable extends Component {
 
 	  {items.map((item, index) => (<tr key={index}>
 
-	    <td>{item.id}</td>
-	    <td>{item['task-name']}</td>
-	    <td>{item['task-description']}</td>
-	    <td style={{cursor: 'pointer'}} onClick={handleSetItem(item)}><i className="fa fa-edit"></i></td>
-	    <td style={{cursor: 'pointer'}} onClick={handleRemoveItem(item)}><i className="fa fa-times"></i></td>
+	    <td>{item._id}</td>
+	    <td>{item.name}</td>
+	    <td>{item.description}</td>
+	    <td style={{cursor: 'pointer'}} onClick={handleSetItem(item, index)}><i className="fa fa-edit"></i></td>
+	    <td style={{cursor: 'pointer'}} onClick={handleRemoveItem(item, index)}><i className="fa fa-times"></i></td>
 	  </tr>))}
 
 	  </tbody>
